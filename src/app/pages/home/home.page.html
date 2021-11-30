@@ -1,0 +1,153 @@
+<ion-header class="ion-no-border"  mode='ios' >
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title  color="primary">Inicio</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-icon slot="end" name="location" mode="ios" color="danger" ></ion-icon>
+     <a href="servicios" decorations="false"><p class="textf3">Chile</p></a> 
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="home" mode="ios" fullscreen>
+  <p class="textf">
+    <ion-text >
+      <ion-text color="primary" style="font-size:20px" >
+        Hola
+     </ion-text>¿Qué estás buscando? 
+     
+    </ion-text>
+  </p>
+  <ion-searchbar></ion-searchbar>
+<!--   
+<ion-button (click)="logOut()" expand="block" fill="clear" shape="round">
+  logout
+</ion-button>
+
+<ion-button (click)="getUser()" expand="block" fill="clear" shape="round">
+  getuser
+</ion-button>
+
+<ion-button (click)="getUid()" expand="block" fill="clear" shape="round">
+  getuid123
+</ion-button>
+getUid() -->
+<!--carrusel  -->
+
+<ion-slides class="slides" [options] = 'slideOpts' >
+  <ion-slide *ngFor="let s1 of slide1">
+    <div>
+      <a href="{{s1.redirectTo}}"
+      target="_blank" >
+      <img src="{{s1.imagen}}" alt="">
+    </a>
+      <p class="title">{{s1.titulo}}</p>
+    </div>
+  </ion-slide>
+</ion-slides>  
+
+  <!--carrusel  card -->
+  <p class="textf">Travel Go</p>
+  <ion-slides pager='true' class="slides2">
+    <ion-slide *ngFor="let i of cardslide">
+      <ion-card >
+        <img src={{i.imagen}} srcalt="">
+        <ion-card-header>
+          <ion-card-subtitle>{{i.subtitulo}}</ion-card-subtitle>
+          <ion-card-title>{{i.titulo}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content >
+          {{i.texto}}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <p class="textf">Destinos destacados</p>
+<ion-slides  class="slides" [options] = 'slideOpts4'>
+  <ion-slide *ngFor="let des of destinos">
+    <a href="https://chile.travel/donde-ir/norte-desierto-atacama/iquique" target="_blank" ><img src="{{des.imagen}}" alt=""></a>
+    <p class="title">{{des.titulo}}</p>
+
+  </ion-slide>
+</ion-slides>
+
+<p class="textf">Experiencias</p>
+<ion-slides  class="slides" [options] = 'slideOpts4'>
+  <ion-slide *ngFor="let x of exp">
+    <a href="https://chile.travel/donde-ir/norte-desierto-atacama/iquique" target="_blank" ><img src="{{x.imagen}}" alt=""></a>
+    <p class="title">{{x.titulo}}</p>
+
+  </ion-slide>
+</ion-slides>
+  
+
+<p class="textf">Top categorias</p>
+
+
+<ion-item lines="none" class="top" >
+  <ion-icon color="primary" name="game-controller"></ion-icon>
+  <a href="servicios" style="text-decoration: none; color: #000; ">
+  <p>
+    Misiones
+  </p>
+  </a> 
+</ion-item>
+
+<ion-item lines="none" class="top2">
+  <ion-icon color="primary"  name="trophy"></ion-icon>
+  <a href="servicios" style="text-decoration: none; color: #000; " >
+  <p >
+    Más vistos
+  </p>
+</a>
+</ion-item>
+<ion-item lines="none" class="top2" >
+  <ion-icon color="primary"  name="camera"></ion-icon>
+  <a href="servicios" style="text-decoration: none; color: #000; ">
+  <p>
+    Fotografías
+  </p>
+</a>
+</ion-item>
+<ion-item lines="none" class="top2">
+  <ion-icon color="primary"  name="people-circle"></ion-icon>
+  <a href="servicios" style="text-decoration: none; color: #000; ">
+  <p>
+    Party (Equipo)
+  </p>
+  </a>
+</ion-item>
+<ion-item lines="none" class="top2">
+  <ion-icon color="primary"  name="golf"></ion-icon>
+  <a href="servicios" style="text-decoration: none; color: #000; ">
+  <p>
+    Guía Turística AR
+  </p>
+  </a>
+</ion-item>
+
+
+<ion-card>
+  <ion-card-header>
+    
+    <ion-card-title>¿Quiénes somos?</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    TravelGo es una empresa que  tiene como meta digitalizar y dar un nuevo aire a la industria del turismo haciéndola más interactiva en pos del turismo 3.0 
+    <ion-img src="assets/img/qsm.svg"></ion-img>
+  </ion-card-content>
+</ion-card>
+
+
+  <div class="space-1">
+    <a href="servicios"><img class="containersc"   src="../assets/img/Seamos_socios.png"></a>    
+  </div>
+
+
+
+</ion-content>

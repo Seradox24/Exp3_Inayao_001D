@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-icon class="btnx" name="close" (click)="cerrarModal()"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen=true >
+
+  
+ 
+  
+
+  
+  <ion-card>
+    <img src="{{foto}}" alt="">
+    <ion-card-header>
+      <ion-card-title>{{nombre}}</ion-card-title>
+      <ion-card-subtitle>{{region}}</ion-card-subtitle>
+      
+    </ion-card-header>
+    <ion-card-content>
+      {{resumen}}
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="cash-outline" slot="start"></ion-icon>
+      <ion-label>VALOR: ${{precio}}</ion-label>
+    </ion-item>
+    <ion-item  >
+    
+      <ion-icon name="time-outline" slot="start"></ion-icon>
+      <ion-label>DURACIÓN:{{tiempo}}</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-icon name="calendar-clear-outline" slot="start"></ion-icon>
+      <ion-label>CONFIRMACIÓN: {{slot}}</ion-label>
+    </ion-item>
+    <ion-item >
+      <ion-icon name="person-outline" slot="start"></ion-icon>
+      <ion-label>CAPACIDAD: {{personas}}</ion-label>
+    </ion-item>
+  
+    
+    <ion-card-content>
+      {{itinerario}}
+    </ion-card-content>
+  </ion-card>
+  
+  
+
+</ion-content>
